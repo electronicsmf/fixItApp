@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/web_element_manipulation.js"></script>
+    <link rel="stylesheet" href="styles/web_element_manipulation.css">
+</head>
+<body>
+     <div id="container">
+        <div id="menu" class="menu">
+             <span id="lessons" class="menuItem">Lessons</span>
+             <span id="docs" class="menuItem">Docs</span>
+             <span id="fade" class="menuItem">Fade</span>
+        </div>
+        <div id="content"></div>
+    </div>
+    <div id="docMenu">
+        <span onclick="setDoc('http://api.jquery.com')">JQuery</span>
+        <span onclick="setDoc('http://api.jqueryui.com')">JQueryUI</span>
+        <span onclick="setDoc('http://jquerymobile.com/demos/1.4.0/')">jQuerymobile</span>
+    </div>    
+</body>
+</html>

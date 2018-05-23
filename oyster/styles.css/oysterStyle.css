@@ -1,0 +1,704 @@
+/*----------------
+Oyster template  
+------------------*/
+
+
+/*---------------
+  Global Css 
+
+-----------------*/
+
+*{
+  box-sizing:border-box;
+}
+body{
+font-family:Verdana,sans-serif;
+overflow-x:hidden;
+margin:0;
+}
+section{
+	padding:100px 0;
+}
+.bg-lighter {
+  background-color:#fdfdfd;
+  color:#3e444d !important;
+}	
+.row-container{
+  max-width:1000px;
+  position:relative;
+  margin:0 auto 20px;
+}
+.col-lg-12{
+	text-align:center;
+    display:inline-block;
+    width:328px;
+}
+.my-area{
+ position:relative;
+ max-width:1000px;
+ height:auto;
+ margin:auto;
+ font-family:'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+/*---------------
+  Navigation-area
+-----------------*/
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+body {
+  background: #F0F8EA;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background: #E54B4B;
+  color: #EBEBD3;
+  padding: 1em 0;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.logo {
+  float: left;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.logo span {
+  font-weight: 400;
+}
+
+.site-nav {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background: #464655;
+  clip-path: circle(0px at top right);
+  transition: clip-path ease-in-out 700ms;
+}
+
+.site-nav--open {
+  clip-path: circle(150% at top right);
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  border-bottom: 1px solid #575766;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+.site-nav a {
+  color: #EBEBD3;
+  display: block;
+  padding: 2em 4em 2em 1.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #E4B363;
+  color: #464655;
+}
+
+.site-nav--icon {
+  display: inline-block;
+  font-size: 1.5em;
+  margin-right: 1em;
+  width: 1.1em;
+  text-align: right;
+  color: rgba(255,255,255,.4);
+}
+
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #EBEBD3;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+@media (min-width: 700px) {
+  
+  .menu-toggle {
+    display: none;
+  }
+  
+  .site-nav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+    clip-path: initial;
+  }
+  
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+  
+  .site-nav a {
+    padding: 0;
+    margin-left: 3em;
+  }
+  
+  .site-nav a:hover,
+  .site-nav a:focus {
+    background: transparent;
+  }
+  
+  .site-nav--icon {
+    display: none;
+  }
+  
+}
+
+/*
+1.3 slideshow area
+=========================*/
+header,
+header .carousel{
+	z-index:1000;
+	position:relative;
+}
+.carousel .inner{
+	height:50%;
+}
+img{
+	display:block;
+	margin:0 auto 20px;
+}
+.carousel h3{
+	margin-top:100px;
+}
+.carousel p {
+  color:red;
+  font-weight:700;
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  text-shadow:1px 1px black;
+  font-weight:bolder;
+}
+.carousel h4{
+	font-size:40px;
+	text-shadow:1px 1px black;
+	color:red;
+	font-weight:bolder;
+}
+@media (min-width:300px){
+	header .carousel{
+		margin-top:50px;
+	    position:relative;
+		}
+	 img{
+	     margin-top:30px;
+		
+	}
+  
+
+			
+}
+
+/*
+1.3 slideshow area ends here
+=========================*/	
+/*----------------
+ About Us		 
+-----------------*/	
+.about-3{
+	background-color:rgba(0,0,0,0.5);
+}	 	 
+
+#container{
+	position:relative;
+	border-radius:50%;
+}
+
+#image{
+	border-radius:50%;
+}		 
+.overlay{
+	position:absolute;
+	bottom:100%;
+	left:0;
+	right:0;
+	background-color:#008CBA;
+	overflow:hidden;
+	border-radius:50%;
+	width:100%;
+	height:0;
+	transition: .5s ease;
+	opacity: .5;
+}		 		 
+#container:hover .overlay{
+	bottom:0;
+	height:100%;
+}		 
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}		 
+/*--------------		 
+  cta-area		 		
+---------------*/				
+section.cta {
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-image: url('../images_oyster/parallax-1.jpg');
+  padding: 250px 0;
+}
+section.cta .cta-content {
+  position: relative;
+  z-index: 1;
+}
+section.cta .cta-content h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: white;
+  max-width: 450px;
+  font-size: 50px;
+}
+@media (min-width: 768px) {
+  section.cta .cta-content h2 {
+    font-size: 80px;
+  }
+}
+section.cta .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#services{
+	font-family:'sans-serif';
+}	 
+				 		 		 
+/*----------
+Contact-Area
+-----------*/
+.contact-1 form .floating-label-form-group,
+.contact-2 form .floating-label-form-group {
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0.5em;
+}
+.contact-1 form .floating-label-form-group input,
+.contact-2 form .floating-label-form-group input,
+.contact-1 form .floating-label-form-group textarea,
+.contact-2 form .floating-label-form-group textarea {
+  z-index: 1;
+  position: relative;
+  padding-right: 0;
+  padding-left: 0;
+  border: none;
+  border-radius: 0;
+  font-size: 1.5em;
+  background: none;
+  box-shadow: none !important;
+  resize: none;
+}
+.contact-1 form .floating-label-form-group label,
+.contact-2 form .floating-label-form-group label {
+  display: block;
+  z-index: 0;
+  position: relative;
+  top: 2em;
+  margin: 0;
+  font-size: 0.85em;
+  line-height: 1.764705882em;
+  vertical-align: middle;
+  vertical-align: baseline;
+  opacity: 0;
+  -webkit-transition: top 0.3s ease,opacity 0.3s ease;
+  -moz-transition: top 0.3s ease,opacity 0.3s ease;
+  -ms-transition: top 0.3s ease,opacity 0.3s ease;
+  transition: top 0.3s ease,opacity 0.3s ease;
+}
+.contact-1 form .floating-label-form-group::not(:first-child),
+.contact-2 form .floating-label-form-group::not(:first-child) {
+  padding-left: 14px;
+}
+.contact-1 form .floating-label-form-group-with-value label,
+.contact-2 form .floating-label-form-group-with-value label {
+  top: 0;
+  opacity: 1;
+}
+.contact-1 form .floating-label-form-group-with-focus label,
+.contact-2 form .floating-label-form-group-with-focus label {
+  color: #439ad5;
+}
+.contact-1 form .floating-label-form-group,
+.contact-1.bg-lighter form .floating-label-form-group,
+.contact-2 form .floating-label-form-group,
+.contact-2.bg-lighter form .floating-label-form-group,
+.contact-1.bg-parallax-light form .floating-label-form-group,
+.contact-2.bg-parallax-light form .floating-label-form-group {
+  border-bottom: 1px solid #555d69;
+}
+.contact-1 form .floating-label-form-group::not(:first-child),
+.contact-1.bg-lighter form .floating-label-form-group::not(:first-child),
+.contact-2 form .floating-label-form-group::not(:first-child),
+.contact-2.bg-lighter form .floating-label-form-group::not(:first-child),
+.contact-1.bg-parallax-light form .floating-label-form-group::not(:first-child),
+.contact-2.bg-parallax-light form .floating-label-form-group::not(:first-child) {
+  border-left: 1px solid #555d69;
+}
+.contact-1 form .floating-label-form-group .form-control,
+.contact-1.bg-lighter form .floating-label-form-group .form-control,
+.contact-2 form .floating-label-form-group .form-control,
+.contact-2.bg-lighter form .floating-label-form-group .form-control,
+.contact-1.bg-parallax-light form .floating-label-form-group .form-control,
+.contact-2.bg-parallax-light form .floating-label-form-group .form-control {
+  color: #6b7686;
+}
+.contact-1 form .row:first-child .floating-label-form-group,
+.contact-1.bg-lighter form .row:first-child .floating-label-form-group,
+.contact-2 form .row:first-child .floating-label-form-group,
+.contact-2.bg-lighter form .row:first-child .floating-label-form-group,
+.contact-1.bg-parallax-light form .row:first-child .floating-label-form-group,
+.contact-2.bg-parallax-light form .row:first-child .floating-label-form-group {
+  border-top: 1px solid #555d69;
+}
+.contact-1 ::-webkit-input-placeholder,
+.contact-1.bg-lighter ::-webkit-input-placeholder,
+.contact-2 ::-webkit-input-placeholder,
+.contact-2.bg-lighter ::-webkit-input-placeholder,
+.contact-1.bg-parallax-light ::-webkit-input-placeholder,
+.contact-2.bg-parallax-light ::-webkit-input-placeholder {
+  color: #555d69 !important;
+}
+.contact-1 :-moz-placeholder,
+.contact-1.bg-lighter :-moz-placeholder,
+.contact-2 :-moz-placeholder,
+.contact-2.bg-lighter :-moz-placeholder,
+.contact-1.bg-parallax-light :-moz-placeholder,
+.contact-2.bg-parallax-light :-moz-placeholder {
+  color: #555d69 !important;
+}
+.contact-1 ::-moz-placeholder,
+.contact-1.bg-lighter ::-moz-placeholder,
+.contact-2 ::-moz-placeholder,
+.contact-2.bg-lighter ::-moz-placeholder,
+.contact-1.bg-parallax-light ::-moz-placeholder,
+.contact-2.bg-parallax-light ::-moz-placeholder {
+  color: #555d69 !important;
+}
+.contact-1 :-ms-input-placeholder,
+.contact-1.bg-lighter :-ms-input-placeholder,
+.contact-2 :-ms-input-placeholder,
+.contact-2.bg-lighter :-ms-input-placeholder,
+.contact-1.bg-parallax-light :-ms-input-placeholder,
+.contact-2.bg-parallax-light :-ms-input-placeholder {
+  color: #555d69 !important;
+}
+.contact-1.bg-parallax-dark form .floating-label-form-group,
+.contact-1.bg-dark form .floating-label-form-group,
+.contact-1.bg-primary form .floating-label-form-group,
+.contact-1.bg-secondary form .floating-label-form-group,
+.contact-1.bg-success form .floating-label-form-group,
+.contact-1.bg-info form .floating-label-form-group,
+.contact-1.bg-warning form .floating-label-form-group,
+.contact-1.bg-danger form .floating-label-form-group,
+.contact-2.bg-parallax-dark form .floating-label-form-group,
+.contact-2.bg-dark form .floating-label-form-group,
+.contact-2.bg-primary form .floating-label-form-group,
+.contact-2.bg-secondary form .floating-label-form-group,
+.contact-2.bg-success form .floating-label-form-group,
+.contact-2.bg-info form .floating-label-form-group,
+.contact-2.bg-warning form .floating-label-form-group,
+.contact-2.bg-danger form .floating-label-form-group {
+  border-bottom: 1px solid #f4f5f7;
+}
+.contact-1.bg-parallax-dark form .floating-label-form-group::not(:first-child),
+.contact-1.bg-dark form .floating-label-form-group::not(:first-child),
+.contact-1.bg-primary form .floating-label-form-group::not(:first-child),
+.contact-1.bg-secondary form .floating-label-form-group::not(:first-child),
+.contact-1.bg-success form .floating-label-form-group::not(:first-child),
+.contact-1.bg-info form .floating-label-form-group::not(:first-child),
+.contact-1.bg-warning form .floating-label-form-group::not(:first-child),
+.contact-1.bg-danger form .floating-label-form-group::not(:first-child),
+.contact-2.bg-parallax-dark form .floating-label-form-group::not(:first-child),
+.contact-2.bg-dark form .floating-label-form-group::not(:first-child),
+.contact-2.bg-primary form .floating-label-form-group::not(:first-child),
+.contact-2.bg-secondary form .floating-label-form-group::not(:first-child),
+.contact-2.bg-success form .floating-label-form-group::not(:first-child),
+.contact-2.bg-info form .floating-label-form-group::not(:first-child),
+.contact-2.bg-warning form .floating-label-form-group::not(:first-child),
+.contact-2.bg-danger form .floating-label-form-group::not(:first-child) {
+  border-left: 1px solid #f4f5f7;
+}
+.contact-1.bg-parallax-dark form .floating-label-form-group .form-control,
+.contact-1.bg-dark form .floating-label-form-group .form-control,
+.contact-1.bg-primary form .floating-label-form-group .form-control,
+.contact-1.bg-secondary form .floating-label-form-group .form-control,
+.contact-1.bg-success form .floating-label-form-group .form-control,
+.contact-1.bg-info form .floating-label-form-group .form-control,
+.contact-1.bg-warning form .floating-label-form-group .form-control,
+.contact-1.bg-danger form .floating-label-form-group .form-control,
+.contact-2.bg-parallax-dark form .floating-label-form-group .form-control,
+.contact-2.bg-dark form .floating-label-form-group .form-control,
+.contact-2.bg-primary form .floating-label-form-group .form-control,
+.contact-2.bg-secondary form .floating-label-form-group .form-control,
+.contact-2.bg-success form .floating-label-form-group .form-control,
+.contact-2.bg-info form .floating-label-form-group .form-control,
+.contact-2.bg-warning form .floating-label-form-group .form-control,
+.contact-2.bg-danger form .floating-label-form-group .form-control {
+  color: #ffffff;
+}
+.contact-1.bg-parallax-dark form .row:first-child .floating-label-form-group,
+.contact-1.bg-dark form .row:first-child .floating-label-form-group,
+.contact-1.bg-primary form .row:first-child .floating-label-form-group,
+.contact-1.bg-secondary form .row:first-child .floating-label-form-group,
+.contact-1.bg-success form .row:first-child .floating-label-form-group,
+.contact-1.bg-info form .row:first-child .floating-label-form-group,
+.contact-1.bg-warning form .row:first-child .floating-label-form-group,
+.contact-1.bg-danger form .row:first-child .floating-label-form-group,
+.contact-2.bg-parallax-dark form .row:first-child .floating-label-form-group,
+.contact-2.bg-dark form .row:first-child .floating-label-form-group,
+.contact-2.bg-primary form .row:first-child .floating-label-form-group,
+.contact-2.bg-secondary form .row:first-child .floating-label-form-group,
+.contact-2.bg-success form .row:first-child .floating-label-form-group,
+.contact-2.bg-info form .row:first-child .floating-label-form-group,
+.contact-2.bg-warning form .row:first-child .floating-label-form-group,
+.contact-2.bg-danger form .row:first-child .floating-label-form-group {
+  border-top: 1px solid #f4f5f7;
+}
+.contact-1.bg-parallax-dark ::-webkit-input-placeholder,
+.contact-1.bg-dark ::-webkit-input-placeholder,
+.contact-1.bg-primary ::-webkit-input-placeholder,
+.contact-1.bg-secondary ::-webkit-input-placeholder,
+.contact-1.bg-success ::-webkit-input-placeholder,
+.contact-1.bg-info ::-webkit-input-placeholder,
+.contact-1.bg-warning ::-webkit-input-placeholder,
+.contact-1.bg-danger ::-webkit-input-placeholder,
+.contact-2.bg-parallax-dark ::-webkit-input-placeholder,
+.contact-2.bg-dark ::-webkit-input-placeholder,
+.contact-2.bg-primary ::-webkit-input-placeholder,
+.contact-2.bg-secondary ::-webkit-input-placeholder,
+.contact-2.bg-success ::-webkit-input-placeholder,
+.contact-2.bg-info ::-webkit-input-placeholder,
+.contact-2.bg-warning ::-webkit-input-placeholder,
+.contact-2.bg-danger ::-webkit-input-placeholder {
+  color: rgba(244, 245, 247, 0.8) !important;
+}
+.contact-1.bg-parallax-dark :-moz-placeholder,
+.contact-1.bg-dark :-moz-placeholder,
+.contact-1.bg-primary :-moz-placeholder,
+.contact-1.bg-secondary :-moz-placeholder,
+.contact-1.bg-success :-moz-placeholder,
+.contact-1.bg-info :-moz-placeholder,
+.contact-1.bg-warning :-moz-placeholder,
+.contact-1.bg-danger :-moz-placeholder,
+.contact-2.bg-parallax-dark :-moz-placeholder,
+.contact-2.bg-dark :-moz-placeholder,
+.contact-2.bg-primary :-moz-placeholder,
+.contact-2.bg-secondary :-moz-placeholder,
+.contact-2.bg-success :-moz-placeholder,
+.contact-2.bg-info :-moz-placeholder,
+.contact-2.bg-warning :-moz-placeholder,
+.contact-2.bg-danger :-moz-placeholder {
+  color: rgba(244, 245, 247, 0.8) !important;
+}
+.contact-1.bg-parallax-dark ::-moz-placeholder,
+.contact-1.bg-dark ::-moz-placeholder,
+.contact-1.bg-primary ::-moz-placeholder,
+.contact-1.bg-secondary ::-moz-placeholder,
+.contact-1.bg-success ::-moz-placeholder,
+.contact-1.bg-info ::-moz-placeholder,
+.contact-1.bg-warning ::-moz-placeholder,
+.contact-1.bg-danger ::-moz-placeholder,
+.contact-2.bg-parallax-dark ::-moz-placeholder,
+.contact-2.bg-dark ::-moz-placeholder,
+.contact-2.bg-primary ::-moz-placeholder,
+.contact-2.bg-secondary ::-moz-placeholder,
+.contact-2.bg-success ::-moz-placeholder,
+.contact-2.bg-info ::-moz-placeholder,
+.contact-2.bg-warning ::-moz-placeholder,
+.contact-2.bg-danger ::-moz-placeholder {
+  color: rgba(244, 245, 247, 0.8) !important;
+}
+.contact-1.bg-parallax-dark :-ms-input-placeholder,
+.contact-1.bg-dark :-ms-input-placeholder,
+.contact-1.bg-primary :-ms-input-placeholder,
+.contact-1.bg-secondary :-ms-input-placeholder,
+.contact-1.bg-success :-ms-input-placeholder,
+.contact-1.bg-info :-ms-input-placeholder,
+.contact-1.bg-warning :-ms-input-placeholder,
+.contact-1.bg-danger :-ms-input-placeholder,
+.contact-2.bg-parallax-dark :-ms-input-placeholder,
+.contact-2.bg-dark :-ms-input-placeholder,
+.contact-2.bg-primary :-ms-input-placeholder,
+.contact-2.bg-secondary :-ms-input-placeholder,
+.contact-2.bg-success :-ms-input-placeholder,
+.contact-2.bg-info :-ms-input-placeholder,
+.contact-2.bg-warning :-ms-input-placeholder,
+.contact-2.bg-danger :-ms-input-placeholder {
+  color: rgba(244, 245, 247, 0.8) !important;
+}
+.contact-2 {
+  position: relative;
+  padding: 0;
+  min-height: 732px;
+}
+.contact-2 .map-content {
+  padding: 100px 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.contact-2 #map-canvas {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}		 
+
+/*-------------
+Contact Area 
+--------------*/
+section.contact{
+	text-align:center;
+}
+section.contact h2{
+	margin-top:0;
+	margin-bottom:25px;
+}
+section.contact h2 i{
+	color:#dd4b39;
+}
+section.contact ul.list-social{
+	margin-bottom:0;
+}
+section.contact ul.list-social li a{
+	display:block;
+	height:80px;
+	width:80px;
+	line-height:80px;
+	font-size:40px;
+	border-radius:100%;
+	color:white;
+}
+section.contact ul.list-social li.social-twitter a{
+	background-color:#1da1f2;
+}
+section.contact ul.list-social li.social-twitter a:hover{
+	background-color:#0d95e8;
+}
+section.contact ul.list-social li.social-facebook a{
+	background-color:#3b5998;
+}
+section.contact ul.list-social li.social-facebook a:hover{
+	background-color:#344e86;
+}
+section.contact ul.list-social li.social-google-plus a{
+	background-color:#dd4b39;
+}
+section.contact ul.list-social li.social-google-plus a:hover{
+	background-color:#d73925;
+}	 
+/*-----------
+Footer
+------------*/
+footer{
+	background-color:#222222;
+	padding:25px 0;
+	text-align:center;
+	color:rgba(255,255,255,0.3);
+}
+footer p{
+	font-size:12px;
+	margin:0;
+}
+footer ul{
+	margin-bottom:0;
+	
+}
+footer-container ul li a{
+	font-size:12px;
+	color:rgba(255,255,255,0.3);
+}
+footer ul li a:hover,
+footer ul li a:focus,
+footer ul li a:active,
+footer ul li a.active{
+	text-decoration:none;
+}		 
+		

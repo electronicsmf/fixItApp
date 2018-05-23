@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+       var superData = {"Super Man":["Lex Luther"],
+                       "Bat Man":["Joker", " Riddler"],
+                       "Spider Man":["Green Goblin","Vulture","Carnage"],
+                       "Thor":["Loki","Frost Giants"]};
+       function writeIt(){
+            for(hero in superData){
+                var villains = superData[hero];
+                for(villainIdx in villains){
+                    var villain = villains[villainIdx];
+                    var listItem = makeListItem(hero,villain);
+                    document.write(listItem);
+
+                   
+                    }
+                }
+            }
+            function makeListItem(name, value){
+                        var itemStr = "<li>" + name + ":&nbsp;" + value + "</li>";
+                        return itemStr;
+
+
+       }                
+
+
+
+
+</script>
+<body onload="writeIt()">
+    
+</body>
+</html>

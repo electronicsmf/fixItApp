@@ -1,0 +1,178 @@
+/*----------------------
+ The Style for lastestPort 
+ Template
+-------------------------*/
+
+
+/*---------------
+   Global style
+-----------------*/
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	 font-family: Arial, Heveltica, sans-serif;
+     font-size:15px;
+	 line-height:1.5;
+	 margin:0;
+	 padding:0;
+}
+h2{
+	 font-family:'Playfair Display',serif;
+	 text-align:center;
+     font-size:200%;
+	 font-weight:700;
+     color:#2c2c2c;
+	 text-decoration:underline;
+}
+span{
+	color:black;
+	
+}
+/*-------------
+  Header area
+--------------*/
+header{
+	background-color:red;
+	text-align:center;
+    color:yellow;
+    padding-top:30px;
+    min-height:70px;
+    border-bottom:#e8491d 3px solid;
+}
+nav ul{
+	overflow:hidden;
+	margin:0;
+    padding:0;
+	text-align:center;
+	color:#fff;
+	background:#35424a;
+	  }
+nav ul li{
+	 display:inline-block;
+     padding:20px;
+}
+nav ul li a{
+	text-decoration:none;
+	color:inherit;
+}
+nav ul li:hover{
+	background-color:rgba(0,0,0,0.25);
+}
+.menu-icon{
+	display:none;
+	box-sizing:border-box;
+	width:100%;
+	cursor:pointer;
+	color:#fff;
+	text-align:right;
+	background:#35424a;
+	padding:15px 10px;
+}
+section{
+	padding:20px 0;
+	overflow:hidden;
+	
+}
+.tagline{
+	background:rgba(0,0,0,0.25);
+	color:#fff;
+	
+}
+.tagline h1{
+	text-align:center;
+	font-size:35px;
+	
+}
+.tagline.container{
+	padding:5%;
+	width:100%;
+	
+}
+/*---------------
+  Gallery-Area
+-----------------*/
+#main-gallery{
+	width:100%;
+	padding:100px 0;
+}
+#main-gallery img{
+	padding:10px;
+	display:block;
+	position:relative;
+	border-radius:5px;
+	border:1px solid #333;
+	cursor:pointer;
+	margin:0 12px 7px 0;
+	box-sizing:border-box;
+}
+/*--------------
+ Footer Social Area
+---------------*/
+.social{
+	  text-align:center;
+	  list-style-type:none;
+}
+.social li{
+	   display:inline;
+	  }
+.social i{
+	   font-size:170%;
+	   margin:1% 5% 1% 4%;
+}
+/*----------------
+   Footer area
+-----------------*/
+footer{
+	height:55px;
+	background:red;
+	padding-top:10px;
+}
+footer.first ul{
+	   padding:15px;
+}
+.social i{
+	color:white;
+}
+footer.second{
+	   background:#2c2c2c;
+	   text-align:center;
+	   height:55px;
+	   padding-top:10px;
+}
+footer.second p{
+	   color:#fff;
+	   padding:10px;
+}
+
+@media (max-width: 580px){
+    nav ul{
+		max-height:0px;
+	}
+	nav ul li{
+		box-sizing:border-box;
+		text-align:center;
+		padding:15px;
+		width:100%;
+	}
+	.menu-icon{
+		display:block;
+	}
+	.container{
+		padding:2%;
+		width:96%;
+		
+	}
+	section{
+		width:100%;
+	}
+	
+	.showing{
+		max-height:20em;
+		
+	}
+	
+	
+}

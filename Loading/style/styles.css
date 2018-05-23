@@ -1,0 +1,14 @@
+div{
+    border:3px ridge white;
+    box-shadow: 5px 5px 5px #888888;
+    display:inline-block;
+    margin:10px;
+}
+img{
+    height:130px;
+    vertical-align: top;
+}
+#images{
+    background-color: black;
+    padding:20px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<script>
+      function writeIt(){
+         var hour= new Date().getHours();
+         var timeOfDay;
+         if(hour >= 7 && hour <12){
+            document.write("Good Morning");
+            timeOfDay = "morning";
+         }else if(hour >=12 && hour < 18){
+             document.write("Good Day!");
+             timeOfDay = "day!";
+         }else{
+             document.write("Good Nite");
+             timeOfDay = "night";
+         }
+         switch(timeOfDay){
+             case "morning":
+             case "day" :
+             document.write("<img src='images/day.png' />");
+             break;
+             case "night" :
+             document.write("<img src='images/night.png' />");
+             break;
+             default:
+             document.write("<img src='images/day.png' />");
+         }
+
+      }
+</script>
+</head>
+<body onload="writeIt()">
+    
+</body>
+</html>
